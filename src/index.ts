@@ -711,7 +711,8 @@ updateSize()
 function setup() {
 	const tileValues = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
 	const toSet = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 ]
-	const levelStats = levels[level][Math.floor(Math.random() * 5)]
+	const levelIndex = Math.min(Math.max(level, 1), levels.length) - 1
+	const levelStats = levels[levelIndex][Math.floor(Math.random() * 5)]
 
 	copyMemoMode = false
 	sMemoButton.src = srcButtonMemoSOff
